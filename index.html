@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -125,6 +124,7 @@ border-radius:12px;
 text-decoration:none;
 font-weight:700;
 transition:.3s;
+display:inline-block;
 }
 
 .primary{
@@ -151,6 +151,7 @@ padding:120px 8%;
 .title{
 font-size:42px;
 margin-bottom:50px;
+text-align:center;
 }
 
 .grid{
@@ -166,6 +167,10 @@ padding:35px;
 border-radius:18px;
 border:1px solid rgba(255,255,255,.08);
 transition:.35s;
+text-decoration:none;
+color:inherit;
+display:block;
+height:100%;
 }
 
 .card:hover{
@@ -178,6 +183,17 @@ box-shadow:0 0 40px rgba(0,255,102,.3);
 color:#00ff66;
 margin-bottom:15px;
 }
+
+.card p{
+opacity:0.85;
+}
+
+/* Make cards clickable */
+.card-link {
+    cursor: pointer;
+}
+
+/* Footer */
 
 footer{
 padding:50px;
@@ -208,12 +224,10 @@ display:none;
 <div class="logo">ENAMENIES</div>
 
 <ul>
-
 <li><a href="#about">About</a></li>
 <li><a href="#territory">Territory</a></li>
 <li><a href="#intel">Intel</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
 
 </nav>
@@ -225,16 +239,15 @@ display:none;
 <h1>ENAMENIES</h1>
 
 <p>
-A modern community portal with a bold neon aesthetic.
-Built for fast access to maps, locations, intelligence,
+A modern community portal with a bold neon aesthetic.<br>
+Built for fast access to maps, locations, intelligence,<br>
 and everything your crew needs.
 </p>
 
 <div class="buttons">
 
 <a href="#about" class="btn primary">Enter</a>
-
-<a href="#territory" class="btn secondary">Explore</a>
+<a href="#territory" class="btn secondary">Explore Territory</a>
 
 </div>
 
@@ -248,20 +261,20 @@ and everything your crew needs.
 
 <div class="grid">
 
-<div class="card">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vbzsxjen0h4" target="_blank" class="card card-link">
 <h3>Locations</h3>
 <p>Browse important locations through a clean interface.</p>
-</div>
+</a>
 
-<div class="card">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.mre1wkmapgsi" target="_blank" class="card card-link">
 <h3>Map</h3>
 <p>Interactive map section ready for your custom markers.</p>
-</div>
+</a>
 
-<div class="card">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.0" target="_blank" class="card card-link">
 <h3>Intel</h3>
 <p>Organize information in one central dashboard.</p>
-</div>
+</a>
 
 </div>
 
@@ -298,29 +311,28 @@ and everything your crew needs.
 
 <div class="grid">
 
-<div class="card">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vjgfoj61nv9" target="_blank" class="card card-link">
 <h3>Banks</h3>
 <p>Placeholder for your bank list.</p>
-</div>
+</a>
 
-<div class="card">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.u2edfvuot2m" target="_blank" class="card card-link">
 <h3>Gas Stations</h3>
 <p>Placeholder for your fuel locations.</p>
-</div>
+</a>
 
-<div class="card">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.ib1183bd2gkl" target="_blank" class="card card-link">
 <h3>Crafting</h3>
 <p>Placeholder for crafting locations.</p>
-</div>
+</a>
 
 </div>
 
 </section>
 
 <footer id="contact">
-© 2026 ENAMENIES
+© 2026 ENAMENIES • Community Portal
 </footer>
 
 </body>
 </html>
-```
