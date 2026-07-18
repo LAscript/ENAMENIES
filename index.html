@@ -42,6 +42,51 @@ from{transform:scale(1);}
 to{transform:scale(1.1);}
 }
 
+/* ==================== LOADING SCREEN ==================== */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #050505;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.6s ease;
+}
+
+#loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+#spinner {
+    width: 180px;
+    height: 180px;
+    animation: spin 1.2s linear infinite;
+    filter: drop-shadow(0 0 25px #00ff66);
+}
+
+#loader p {
+    margin-top: 30px;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #00ff66;
+    opacity: 0.9;
+}
+
+/* Spinning Animation */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 /* Navbar */
 
 nav{
@@ -188,11 +233,6 @@ margin-bottom:15px;
 opacity:0.85;
 }
 
-/* Make cards clickable */
-.card-link {
-    cursor: pointer;
-}
-
 /* Footer */
 
 footer{
@@ -218,6 +258,14 @@ display:none;
 </head>
 
 <body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+    <div class="loader-content">
+        <img id="spinner" src="https://i.imgur.com/948tzws.png" alt="Loading...">
+        <p>ESTABLISHING CONNECTION...</p>
+    </div>
+</div>
 
 <nav>
 
@@ -261,17 +309,17 @@ and everything your crew needs.
 
 <div class="grid">
 
-<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vbzsxjen0h4" target="_blank" class="card card-link">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vbzsxjen0h4" target="_blank" class="card">
 <h3>Locations</h3>
 <p>Browse important locations through a clean interface.</p>
 </a>
 
-<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.mre1wkmapgsi" target="_blank" class="card card-link">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.mre1wkmapgsi" target="_blank" class="card">
 <h3>Map</h3>
 <p>Interactive map section ready for your custom markers.</p>
 </a>
 
-<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.0" target="_blank" class="card card-link">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.0" target="_blank" class="card">
 <h3>Intel</h3>
 <p>Organize information in one central dashboard.</p>
 </a>
@@ -311,17 +359,17 @@ and everything your crew needs.
 
 <div class="grid">
 
-<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vjgfoj61nv9" target="_blank" class="card card-link">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vjgfoj61nv9" target="_blank" class="card">
 <h3>Banks</h3>
 <p>Placeholder for your bank list.</p>
 </a>
 
-<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.u2edfvuot2m" target="_blank" class="card card-link">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.u2edfvuot2m" target="_blank" class="card">
 <h3>Gas Stations</h3>
 <p>Placeholder for your fuel locations.</p>
 </a>
 
-<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.ib1183bd2gkl" target="_blank" class="card card-link">
+<a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.ib1183bd2gkl" target="_blank" class="card">
 <h3>Crafting</h3>
 <p>Placeholder for crafting locations.</p>
 </a>
@@ -333,6 +381,21 @@ and everything your crew needs.
 <footer id="contact">
 © 2026 ENAMENIES • Community Portal
 </footer>
+
+<script>
+// Auto hide loader after 4.5 seconds
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const loader = document.getElementById('loader');
+        loader.classList.add('hidden');
+        
+        // Optional: completely remove from DOM after fade
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 600);
+    }, 4500);
+});
+</script>
 
 </body>
 </html>
