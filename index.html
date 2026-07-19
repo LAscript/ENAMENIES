@@ -4,11 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ENAMENIES</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -16,15 +13,12 @@ box-sizing:border-box;
 font-family:Inter,sans-serif;
 scroll-behavior:smooth;
 }
-
 body{
 background:#050505;
 color:white;
 overflow-x:hidden;
 }
-
 /* Animated background */
-
 body::before{
 content:"";
 position:fixed;
@@ -36,12 +30,10 @@ linear-gradient(#050505,#080808);
 animation:bgMove 12s infinite alternate;
 z-index:-2;
 }
-
 @keyframes bgMove{
 from{transform:scale(1);}
 to{transform:scale(1.1);}
 }
-
 /* ==================== LOADING SCREEN ==================== */
 #loader {
     position: fixed;
@@ -56,23 +48,19 @@ to{transform:scale(1.1);}
     z-index: 9999;
     transition: opacity 0.6s ease;
 }
-
 #loader.hidden {
     opacity: 0;
     pointer-events: none;
 }
-
 .loader-content {
     text-align: center;
 }
-
 #spinner {
     width: 180px;
     height: 180px;
     animation: spin 1.2s linear infinite;
     filter: drop-shadow(0 0 25px #00ff66);
 }
-
 #loader p {
     margin-top: 30px;
     font-size: 18px;
@@ -80,15 +68,12 @@ to{transform:scale(1.1);}
     color: #00ff66;
     opacity: 0.9;
 }
-
 /* Spinning Animation */
 @keyframes spin {
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-
 /* Navbar */
-
 nav{
 position:fixed;
 top:20px;
@@ -106,31 +91,25 @@ border:1px solid rgba(255,255,255,.08);
 border-radius:20px;
 z-index:999;
 }
-
 .logo{
 font-size:30px;
 font-weight:800;
 color:#00ff66;
 }
-
 nav ul{
 display:flex;
 gap:35px;
 list-style:none;
 }
-
 nav a{
 text-decoration:none;
 color:white;
 transition:.3s;
 }
-
 nav a:hover{
 color:#00ff66;
 }
-
 /* Hero */
-
 .hero{
 height:100vh;
 display:flex;
@@ -139,14 +118,12 @@ align-items:center;
 text-align:center;
 padding:30px;
 }
-
 .hero h1{
 font-size:80px;
 font-weight:800;
 margin-bottom:20px;
 text-shadow:0 0 30px #00ff66;
 }
-
 .hero p{
 max-width:700px;
 margin:auto;
@@ -154,7 +131,6 @@ opacity:.8;
 font-size:20px;
 line-height:1.7;
 }
-
 .buttons{
 margin-top:45px;
 display:flex;
@@ -162,7 +138,6 @@ gap:20px;
 justify-content:center;
 flex-wrap:wrap;
 }
-
 .btn{
 padding:16px 35px;
 border-radius:12px;
@@ -171,40 +146,49 @@ font-weight:700;
 transition:.3s;
 display:inline-block;
 }
-
 .primary{
 background:#00ff66;
 color:black;
 }
-
 .secondary{
 border:1px solid #00ff66;
 color:#00ff66;
 }
-
 .btn:hover{
 transform:translateY(-5px);
 box-shadow:0 0 30px #00ff66;
 }
 
-/* Sections */
+/* New Crew Banner */
+.crew-banner {
+    background: rgba(0, 255, 102, 0.1);
+    border: 1px solid #00ff66;
+    padding: 20px;
+    border-radius: 16px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+}
+.crew-banner h2 {
+    color: #00ff66;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
 
+/* Sections */
 section{
 padding:120px 8%;
 }
-
 .title{
 font-size:42px;
 margin-bottom:50px;
 text-align:center;
 }
-
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 }
-
 .card{
 background:rgba(255,255,255,.05);
 backdrop-filter:blur(15px);
@@ -217,48 +201,42 @@ color:inherit;
 display:block;
 height:100%;
 }
-
 .card:hover{
 transform:translateY(-8px);
 border-color:#00ff66;
 box-shadow:0 0 40px rgba(0,255,102,.3);
 }
-
 .card h3{
 color:#00ff66;
 margin-bottom:15px;
 }
-
 .card p{
 opacity:0.85;
 }
+.card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    opacity: 0.9;
+}
 
 /* Footer */
-
 footer{
 padding:50px;
 text-align:center;
 opacity:.7;
 border-top:1px solid rgba(255,255,255,.08);
 }
-
 @media(max-width:900px){
-
 .hero h1{
 font-size:48px;
 }
-
 nav ul{
 display:none;
 }
-
 }
-
 </style>
 </head>
-
 <body>
-
 <!-- LOADING SCREEN -->
 <div id="loader">
     <div class="loader-content">
@@ -268,118 +246,159 @@ display:none;
 </div>
 
 <nav>
-
 <div class="logo">ENAMENIES</div>
-
 <ul>
 <li><a href="#about">About</a></li>
 <li><a href="#territory">Territory</a></li>
+<li><a href="#allies">Allies</a></li>
 <li><a href="#intel">Intel</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <section class="hero">
-
 <div>
-
 <h1>ENAMENIES</h1>
-
 <p>
 A modern community portal with a bold neon aesthetic.<br>
 Built for fast access to maps, locations, intelligence,<br>
-and everything your crew needs.
+and everything your crew needs to dominate the streets.
 </p>
-
 <div class="buttons">
-
-<a href="#about" class="btn primary">Enter</a>
+<a href="#about" class="btn primary">Enter The City</a>
 <a href="#territory" class="btn secondary">Explore Territory</a>
-
 </div>
-
 </div>
-
 </section>
 
 <section id="about">
-
 <h2 class="title">Overview</h2>
-
 <div class="grid">
-
 <a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vbzsxjen0h4" target="_blank" class="card">
 <h3>Locations</h3>
-<p>Browse important locations through a clean interface.</p>
+<p>Browse important locations through a clean interface. Safehouses, drop points, and high-value spots updated in real time.</p>
 </a>
-
 <a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.mre1wkmapgsi" target="_blank" class="card">
 <h3>Map</h3>
-<p>Interactive map section ready for your custom markers.</p>
+<p>Interactive map section ready for your custom markers. Territory control and heat zones marked.</p>
 </a>
-
 <a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.0" target="_blank" class="card">
 <h3>Intel</h3>
-<p>Organize information in one central dashboard.</p>
+<p>Organize information in one central dashboard. Police patterns, rival movements, and business opportunities.</p>
 </a>
-
 </div>
-
 </section>
 
 <section id="territory">
-
 <h2 class="title">Territory</h2>
-
 <div class="grid">
-
 <div class="card">
 <h3>South LS</h3>
-<p>Primary operational area.</p>
+<p><strong>Primary operational area.</strong><br><br>
+Core of ENAMENIES control. High foot traffic, multiple safehouses, and strong street presence. Main base of operations.</p>
 </div>
-
 <div class="card">
 <h3>Downtown</h3>
-<p>Financial district access.</p>
+<p><strong>Financial district access.</strong><br><br>
+Bank runs, high-end deals, and corporate infiltration zone. Heavily monitored but high reward.</p>
 </div>
-
 <div class="card">
 <h3>Blaine County</h3>
-<p>Northern region overview.</p>
+<p><strong>Northern region overview.</strong><br><br>
+Supply runs, weapon caches, and low-profile meetings. Good escape routes into the hills.</p>
 </div>
-
 </div>
+</section>
 
+<section id="allies">
+<h2 class="title">Allied Crews</h2>
+<div class="crew-banner">
+    <h2>ENAMENIES NETWORK</h2>
+    <p>United under one banner • Strength in numbers • Loyalty above all</p>
+</div>
+<div class="grid">
+<div class="card">
+<h3>RANGERS</h3>
+<p>Trusted allies in South LS. Known for mobility and coordinated hits.</p>
+</div>
+<div class="card">
+<h3>ONWAYS</h3>
+<p>Strong presence in transport and logistics. Reliable backup on runs.</p>
+</div>
+<div class="card">
+<h3>S.X.C.R.E.D</h3>
+<p>Elite operators. Handle high-risk intel and precision work.</p>
+</div>
+<div class="card">
+<h3>East Coast</h3>
+<p>East-side enforcers. Control key entry points and trade routes.</p>
+</div>
+<div class="card">
+<h3>Huh Ch Ah</h3>
+<p>Street-level specialists. Excellent at gathering local information.</p>
+</div>
+<div class="card">
+<h3>Sliqq100</h3>
+<p>Tech and vehicle experts. Keep the fleet running and comms secure.</p>
+</div>
+<div class="card">
+<h3>RUSHER</h3>
+<p>Aggressive pushers. Dominate confrontations and expand influence.</p>
+</div>
+<div class="card">
+<h3>Tk</h3>
+<p>Key strategist and connector. Helps maintain alliances.</p>
+</div>
+<div class="card">
+<h3>𝖓𝖟 𝖘𝖔𝖑𝖔</h3>
+<p>Independent operator aligned with the network. Solo missions with high success rate.</p>
+</div>
+<div class="card">
+<h3>Rico • ENAMENIES</h3>
+<p>Leadership • Founder • Visionary behind the entire operation.</p>
+</div>
+</div>
 </section>
 
 <section id="intel">
-
-<h2 class="title">Information</h2>
-
+<h2 class="title">Information Hub</h2>
 <div class="grid">
-
 <a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.vjgfoj61nv9" target="_blank" class="card">
 <h3>Banks</h3>
-<p>Placeholder for your bank list.</p>
+<p>Full list of targets, security details, and escape routes.</p>
+<ul>
+<li>Union Depository</li>
+<li>Fleeca Branches</li>
+<li>Paleto Bay</li>
+</ul>
 </a>
-
 <a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.u2edfvuot2m" target="_blank" class="card">
 <h3>Gas Stations</h3>
-<p>Placeholder for your fuel locations.</p>
+<p>Fuel stops, resupply points, and ambush locations.</p>
+<ul>
+<li>Xero Gas (South LS)</li>
+<li>Round Corner</li>
+<li>Sandy Shores</li>
+</ul>
 </a>
-
 <a href="https://docs.google.com/document/d/1jYTrsmsQ2BgtKw1Q5pe5S1hHKJMShIGQzOu5hcBGjck/edit?tab=t.ib1183bd2gkl" target="_blank" class="card">
-<h3>Crafting</h3>
-<p>Placeholder for crafting locations.</p>
+<h3>Crafting / Stashes</h3>
+<p>Weapon &amp; item crafting locations. Hidden stash coordinates.</p>
 </a>
-
+<div class="card">
+<h3>Rivals &amp; Heat</h3>
+<p>Current threats and police activity patterns. Updated regularly.</p>
 </div>
-
+<div class="card">
+<h3>Business Fronts</h3>
+<p>Legal covers and money laundering operations.</p>
+</div>
+</div>
 </section>
 
 <footer id="contact">
-© 2026 ENAMENIES • Community Portal
+© 2026 ENAMENIES • Community Portal • All Rights Reserved<br>
+Stay solid. Stay connected. Stay dangerous.
 </footer>
 
 <script>
@@ -388,7 +407,7 @@ window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('loader');
         loader.classList.add('hidden');
-        
+       
         // Optional: completely remove from DOM after fade
         setTimeout(() => {
             loader.style.display = 'none';
@@ -396,6 +415,5 @@ window.addEventListener('load', () => {
     }, 4500);
 });
 </script>
-
 </body>
 </html>
