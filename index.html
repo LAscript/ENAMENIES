@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ENAMENIES</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://items.rainmad.com/_next/image?url=%2Fimages%2Fchairs%2Fchair62.png&w=256&q=75">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
 *{
@@ -163,16 +167,25 @@ box-shadow:0 0 30px #00ff66;
 .crew-banner {
     background: rgba(0, 255, 102, 0.1);
     border: 1px solid #00ff66;
-    padding: 20px;
+    padding: 25px;
     border-radius: 16px;
     margin: 30px auto;
     max-width: 900px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+.crew-banner img {
+    width: 90px;
+    height: 90px;
+    filter: drop-shadow(0 0 15px #00ff66);
 }
 .crew-banner h2 {
     color: #00ff66;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 /* Sections */
@@ -240,7 +253,7 @@ display:none;
 <!-- LOADING SCREEN -->
 <div id="loader">
     <div class="loader-content">
-        <img id="spinner" src="https://i.imgur.com/948tzws.png" alt="Loading...">
+        <img id="spinner" src="https://items.rainmad.com/_next/image?url=%2Fimages%2FArtwork-DrugsV%2Fkush_weed.png&w=256&q=75" alt="Loading...">
         <p>ESTABLISHING CONNECTION...</p>
     </div>
 </div>
@@ -313,6 +326,7 @@ Supply runs, weapon caches, and low-profile meetings. Good escape routes into th
 <section id="allies">
 <h2 class="title">Allied Crews</h2>
 <div class="crew-banner">
+    <img src="https://items.rainmad.com/_next/image?url=%2Fimages%2Fclothing%2Fflag_green.png&w=256&q=75" alt="ENAMENIES Flag">
     <h2>ENAMENIES NETWORK</h2>
     <p>United under one banner • Strength in numbers • Loyalty above all</p>
 </div>
@@ -408,7 +422,6 @@ window.addEventListener('load', () => {
         const loader = document.getElementById('loader');
         loader.classList.add('hidden');
        
-        // Optional: completely remove from DOM after fade
         setTimeout(() => {
             loader.style.display = 'none';
         }, 600);
